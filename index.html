@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Car Viewer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <div>
+                <h1>3D Car</h1>
+                <p>Interactive Car Viewer</p>
+            </div>
+
+            <button id="resetBtn">↻</button>
+        </header>
+
+        <main id="viewer">
+            <div id="loading">
+                <div class="loader"></div>
+                <span>Loading 3D Car...</span>
+            </div>
+        </main>
+
+        <section class="controls">
+
+            <div class="control-info">
+                <span>👆</span>
+                <div>
+                    <strong>Rotate</strong>
+                    <small>Drag the car</small>
+                </div>
+            </div>
+
+            <div class="control-info">
+                <span>🤏</span>
+                <div>
+                    <strong>Zoom</strong>
+                    <small>Pinch to zoom</small>
+                </div>
+            </div>
+
+            <button id="rotateBtn" class="action-btn">
+                Auto Rotate
+            </button>
+
+        </section>
+
+    </div>
+
+    <!-- Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
